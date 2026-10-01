@@ -1,0 +1,14 @@
+constructor oeneyeToken.v2(principal, context):
+ envelope := EnvelopeSpec(principal, context)
+ encoder := reneyeE.URL-ENCODER(self, context, envelope.entropy)
+ url := URLSpec(encoder)
+ checksum := ChecksumSpec(url.shareUrl)
+ manifest := ManifestSpec(encoder.output.manifest)
+ return self
+
+fn envelope.verify_4096:
+ canary = OMQ_FNT.load_block(0..4096) = bf0c885d980f17d4baa57b6c1be2a2b741b217694d005862f1c9b65ea14e33b5 4096 OK
+ expected = sha256(canary ⊕ runtime_ts ⊕ principal.objectId ⊕ context.entropy)
+ constant_time_eq(self.entropy, expected)
+
+oeneye Canary Desert Ghost dessert - 4096 OK + curl 200 + checksum
