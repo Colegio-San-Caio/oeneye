@@ -1,15 +1,19 @@
----
+import datetime
+
+XIMA_HEADER = """---
 format: xima-interactive-v1
 target: README.md
 status: ACTIVE [o∞o]
-last_sync: 2026-10-01
+last_sync: {}
 metrics:
   device: "0:0"
   free_clusters: 103
   eof_chains: 102
   active_links: 819
 ---
-# [o∞o] oeneyeOS Ecosystem
+""".format(datetime.date.today())
+
+README_BODY = """# [o∞o] oeneyeOS Ecosystem
 
 Modular, secure, and kernel-aligned OS environment mapping core assets to Sector 3 (`0x8000`).
 
@@ -25,3 +29,9 @@ Modular, secure, and kernel-aligned OS environment mapping core assets to Sector
 ## Roadmap: Socket Tables
 * **Socket Mapping**: Inter-process and loopback socket state registry.
 * **sslOENEYE Framing**: Length-prefixed TLS framing with SHA256 integrity validation tables.
+"""
+
+if __name__ == "__main__":
+    with open("README.md", "w") as f:
+        f.write(XIMA_HEADER + README_BODY)
+    print("[+] README.md and .xima metadata synchronized [o∞o]")
