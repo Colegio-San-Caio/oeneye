@@ -8,3 +8,7 @@ isbn_repo/
 oeneye_manifest.json
 app.py
 package_extras.sh
+*.pid
+*.img
+*.bin
+*.vhd
