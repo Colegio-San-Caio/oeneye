@@ -4,6 +4,8 @@ __pycache__/
 *.bin
 *.tar.gz
 *.sh
+isbn_repo/
+oeneye_manifest.json
 app.py
 cat.py
-oeneye_manifest.json
+package_extras.sh
