@@ -4,9 +4,8 @@ import pathlib
 root = pathlib.Path(".")
 out = root / "CATALOG.md"
 
-books = sorted(root.glob("978-*/README.md"))
-if not books:
-    books = sorted(pathlib.Path("isbn_repo").glob("**/README.md")) if pathlib.Path("isbn_repo").exists() else []
+# Match any subfolder containing a README.md (excluding root)
+books = sorted([p for p in root.glob("**/README.md") if p != root / "README.md"])
 
 with open(out, "w", encoding="utf-8") as f:
     f.write("# OenEye - Catalog (auto)\n\n")
