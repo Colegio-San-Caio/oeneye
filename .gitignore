@@ -1,0 +1,5 @@
+bulk_portfolios/
+*.log
+isbn_repo/
+*.bin
+*.sh
