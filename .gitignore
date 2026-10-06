@@ -12,3 +12,4 @@ package_extras.sh
 *.img
 *.bin
 *.vhd
+*.pid
