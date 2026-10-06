@@ -1,5 +1,9 @@
 bulk_portfolios/
+__pycache__/
 *.log
-isbn_repo/
 *.bin
+*.tar.gz
 *.sh
+app.py
+cat.py
+oeneye_manifest.json
