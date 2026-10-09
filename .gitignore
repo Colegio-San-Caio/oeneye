@@ -13,3 +13,5 @@ package_extras.sh
 *.bin
 *.vhd
 *.pid
+*.img
+*.iso
