@@ -1,0 +1,24 @@
+name: nightly-dev
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # midnight UTC
+  workflow_dispatch:
+
+jobs:
+  nightly:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create nightly tag
+        run: |
+          TAG="v1.2-dev-$(date +%Y%m%d)"
+          git tag $TAG || true
+          git push origin $TAG || true
+          gh release create $TAG --repo Colegio-San-Caio/oeneye --prerelease \
+          --title "Nightly $TAG - dev" \
+          --notes "NIGHTLY DEV - based on v1.1 OQM+cURL sieve-PL36883 - white page footer never delete - by Bug Crowd clevjhon - D16S: $(git rev-parse --short HEAD)"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
