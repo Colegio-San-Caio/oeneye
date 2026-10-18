@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>oeneye Catalog</title>
+<style>
+body{background:#0b0f14;color:#d7e1ec;font-family:monospace;margin:12px}
+h1{font-size:1.2em}
+input{width:100%;padding:8px;background:#141b24;color:#d7e1ec;border:1px solid #2a3644;margin-bottom:10px}
+.wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.85em}
+th,td{border:1px solid #2a3644;padding:5px 8px;text-align:left;white-space:nowrap}
+th{background:#141b24;cursor:pointer}
+tr.dup{opacity:.55}
+code{color:#7fd1ae}
+</style></head><body>
+<h1>oeneye Catalog</h1>
+<p>Generated __DATE__ &mdash; __N__ items (__U__ unique)</p>
+<input id="q" placeholder="Filter..." oninput="f()">
+<div class="wrap"><table id="t"><thead><tr><th>Name</th><th>Location</th><th>Size</th><th>Modified</th><th>Fingerprint</th><th>Status</th></tr></thead>
+<tbody>
+__ROWS__</tbody></table></div>
+<script>
+function f(){var q=document.getElementById('q').value.toLowerCase();
+document.querySelectorAll('#t tbody tr').forEach(function(r){r.style.display=r.textContent.toLowerCase().indexOf(q)>-1?'':'none'})}
+document.querySelectorAll('#t th').forEach(function(h,i){h.onclick=function(){
+var b=document.querySelector('#t tbody'),a=[].slice.call(b.rows);
+a.sort(function(x,y){var u=x.cells[i],v=y.cells[i];
+if(i==2)return u.dataset.v-v.dataset.v;return u.textContent.localeCompare(v.textContent)});
+a.forEach(function(r){b.appendChild(r)})}})
+</script></body></html>

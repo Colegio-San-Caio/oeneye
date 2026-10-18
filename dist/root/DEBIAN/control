@@ -1,0 +1,5 @@
+Package: oeneyeos
+Version: 20261017.1648
+Architecture: all
+Maintainer: Kai Ketelhut
+Description: oeneyeOS floppy image with local QEMU launcher

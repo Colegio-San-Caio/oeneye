@@ -15,3 +15,5 @@ package_extras.sh
 *.pid
 *.img
 *.iso
+raw_cat_deb/*.raw
+backup-demo.git/

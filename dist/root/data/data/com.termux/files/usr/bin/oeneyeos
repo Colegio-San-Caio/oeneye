@@ -1,0 +1,2 @@
+#!/bin/sh
+exec qemu-system-i386 -fda /data/data/com.termux/files/usr/share/oeneyeos/oeneyeOS.img -boot a -nographic "$@"

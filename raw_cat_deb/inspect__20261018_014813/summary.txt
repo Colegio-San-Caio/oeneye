@@ -1,0 +1,11 @@
+== 1. Basic metadata ==
+
+== 2. SHA-256 (submit this to VirusTotal) ==
+
+== 3. File type ==
+: cannot open: No such file or directory
+
+== 4. Partition table (fdisk) ==
+
+== 5. Embedded signatures (binwalk) ==
+binwalk not installed (apt install binwalk / pip install binwalk)

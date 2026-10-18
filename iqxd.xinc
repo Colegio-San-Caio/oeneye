@@ -1,0 +1,14 @@
+; iqxd.xinc - OenEye OS include
+%ifndef IQXD_XINC
+%define IQXD_XINC
+
+%define OENEYE_MAGIC 0x4F45
+%define BOOT_SEG 0x07C0
+
+%macro PRINT_CHAR 1
+  mov ah, 0x0E
+  mov al, %1
+  int 0x10
+%endmacro
+
+%endif

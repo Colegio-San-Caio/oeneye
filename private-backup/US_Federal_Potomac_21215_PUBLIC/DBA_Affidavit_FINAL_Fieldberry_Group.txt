@@ -1,0 +1,15 @@
+AFFIDAVIT OF TRADE NAME / DBA - FINAL
+Legal: Kai Olaf Ketelhut
+DBA: Fieldberry Group
+Neuer Weg 4, 14641 Nauen, DEU
+Sole Proprietor
+
+References: INC-GSAFSD21725465 / INC-GSAFSD21742726 / sys_id af069121933fcb109462881d48373ca5 / sys_id 62d59428cf3303105180fe152f851c05
+EVS: 39c65fa0-4342-468f-ab8a-9fa0b096d438 / d50fd542-459c-42b9-89a8-b9af2b540467
+Checksums:
+af069.html SHA256 6da0da5dcb52b9653bf01553a80610a06c3398beeb227c497b83238153a9ae39 MD5 88298a759210b240987cd4886738a338
+62d59428.html SHA256 49559259e81093d9ccaa46e899fa8fc3ea701f9ca7703107a2b7414bf869a4a6 MD5 5a22abd7f863889dd5251e30b51f2714
+
+I, Kai Olaf Ketelhut, AH, declare Legal removed-phone
+
+Signed: _______________ Date: 2026-10-09

@@ -1,0 +1,12 @@
+import sys
+
+def draw_cat():
+    cat = """
+     /\_/\  
+    ( o.o ) 
+     > ^ <  
+    """
+    print(cat)
+
+if __name__ == "__main__":
+    draw_cat()

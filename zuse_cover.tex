@@ -1,0 +1,51 @@
+\documentclass[12pt]{book}
+\usepackage{santberk}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{background}
+\usepackage{hyperref}
+
+% ZUSE Z3 schematic as background — Tier -1
+\backgroundsetup{
+scale=1,
+color=black,
+opacity=0.18,
+angle=0,
+contents={
+  \begin{tikzpicture}[remember picture,overlay]
+  \node at (current page.center) {\includegraphics[width=\paperwidth,height=\paperheight,keepaspectratio]{zuse_z3_schematic.jpg}};
+  \end{tikzpicture}
+}
+}
+
+\begin{document}
+\BgThispage
+
+\begin{center}
+\vspace*{2cm}
+{\Huge \textbf{KONRAD ZUSE}}\\[0.3cm]
+{\large The Free Dev — 1910-1995 — Berlin}\\[1.5cm]
+
+\begin{tikzpicture}
+\draw[color=gold,line width=2pt] (0,0) rectangle (12,7);
+\node[align=center] at (6,3.5) {
+{\Large Plankalk\"ul 1945 $\rightarrow$ oeneyeOS $\rightarrow$ ns\_HOLLA}\\[0.4cm]
+{\small Z1 (1938) — Z3 (1941) — First programmable computer — living room fab}\\[0.4cm]
+{\small \texttt{T(c)=State\_Active if match(ns\_HOLLA)} — Grid M=R$\times$C}\\[0.4cm]
+{\small c$_{1,1}$="WHERE YOU AT?" — c$_{1,2}$="HOLLA WHEN YO..."}\\[0.8cm]
+{\small \textbf{MOSFETQ — Technologie als Gesellschaftstreiber}}\\
+{\small ISBN 978-3-00-068463-0 — 14. Auflage 2021 — Fieldberry Group}\\
+{\small Order 2026-0812-CNNN3-BK01 — SIETEHR FOUNDATION CNNN3}\\[0.4cm]
+{\small bunq.me/fieldberry — 21€+TAX}\\[0.4cm]
+{\small \texttt{xj2v2uswlygq2nznuwpy4uy76w62uxq6hzh7dy63244we34eg2r23pid.onion}}\\
+{\small holla.oeneye:8080 — holla\_proxy.exe}
+};
+\end{tikzpicture}
+
+\vfill
+{\small \textit{"Der Computer ist aus der Idee entstanden, die geistige Arbeit zu mechanisieren." — Konrad Zuse}}\\[0.2cm]
+{\small Dedicated to the free dev I met when alive — Berlin — Evergreen by JP — (0)b}\\[0.2cm]
+{\small TruthSocial: truthsocial.com/group/santberk — Post 117410942877598320}
+\end{center}
+
+\end{document}

@@ -1,0 +1,13 @@
+python3 -c "
+import zipfile, os
+for ext in ['.iqxd', '.ximg']:
+    filename = f'oeneye_pages{ext}'
+    if os.path.exists(filename):
+        print(f'Checking {filename}...')
+        with zipfile.ZipFile(filename, 'r') as zf:
+            bad = zf.testzip()
+            print(f'  Status: {\"Corrupted: \" + bad if bad else \"OK\"}')
+    else:
+        print(f'File {filename} not found.')
+"
+
